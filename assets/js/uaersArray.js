@@ -107,3 +107,13 @@ console.table(users);
 
 //  який відсоток користувачів підписані (subscribed).
 
+function howMuchIsSubscribed (invArray) {
+    const howMuchSubscribed = invArray.filter(item =>
+        item.isSubscribed === true);
+
+    console.log(`Підписку мають`+` `+`${Math.round((howMuchSubscribed.length / invArray.length) * 100)}% користувачів`);
+};
+
+howMuchIsSubscribed(users);
+
+// Знайти середній вік користувачів 
