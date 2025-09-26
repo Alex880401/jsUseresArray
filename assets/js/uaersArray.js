@@ -125,3 +125,9 @@ function avarageAge(invArray) {
 };
 
 avarageAge(users);
+
+// Впорядкувати користувачів за віком
+
+users.sort((item1, item2) => item1.age - item2.age);
+
+console.table(users);
