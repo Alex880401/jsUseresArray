@@ -111,9 +111,17 @@ function howMuchIsSubscribed (invArray) {
     const howMuchSubscribed = invArray.filter(item =>
         item.isSubscribed === true);
 
-    console.log(`Підписку мають`+` `+`${Math.round((howMuchSubscribed.length / invArray.length) * 100)}% користувачів`);
+    console.log(`Підписку мають ${Math.round((howMuchSubscribed.length / invArray.length) * 100)}% користувачів`);
 };
 
 howMuchIsSubscribed(users);
 
 // Знайти середній вік користувачів 
+
+function avarageAge(invArray) {
+    const summ = invArray.reduce((accum, item) => accum + item.age, 0);
+
+    console.log(`Середній вік користувачів: ${Math.round(summ / invArray.length)} років`);
+};
+
+avarageAge(users);
