@@ -48,9 +48,12 @@ users.forEach(item => {console.log(item.getFullName())});
 
 const notAdultFemaleName = [];
 
-users.forEach(item => {if (item.isMale === false & item.age >= 6 & item.age <= 18) {
+users.forEach(item => {
+    if(item.isMale === false & item.age >= 6 & item.age <= 18) {
         notAdultFemaleName.push(item.getFullName());
-    }});
+        }
+    }
+);
 
 console.log(notAdultFemaleName);
 
@@ -86,5 +89,10 @@ users.forEach(print());
 users.forEach(item => console.log(item.age));
 */
 
+// Видалити з масиву користувача з email  useremail5@gmail.com.
 
+users.splice(users.findIndex(item =>
+    item.email === 'useremail5@gmail.com'), 1); 
+
+console.table(users);
 
