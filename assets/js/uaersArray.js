@@ -131,3 +131,22 @@ avarageAge(users);
 users.sort((item1, item2) => item1.age - item2.age);
 
 console.table(users);
+
+// Перевірити, чи є серед користувачів користувач з email`ом useremail7@gmail.com.
+
+if(users.some(item => 
+    item.email === 'useremail7@gmail.com')) {
+        console.log(`В масиві є користувач, який має email useremail7@gmail.com`);
+    } else {
+        console.log(`В масиві немає користувачів, які мають email useremail7@gmail.com`);
+    };
+
+// Перевірити, чи всі користувачі підписані 
+
+if(users.every(item => 
+    item.isSubscribed === true)) {
+        console.log(`Всі користувачі підписані`);
+    } else {
+        console.log(`Не всі користувачі підписані`);
+    };
+    
