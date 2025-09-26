@@ -51,9 +51,8 @@ const notAdultFemaleName = [];
 users.forEach(item => {
     if(item.isMale === false & item.age >= 6 & item.age <= 18) {
         notAdultFemaleName.push(item.getFullName());
-        }
     }
-);
+});
 
 console.log(notAdultFemaleName);
 
@@ -95,4 +94,16 @@ users.splice(users.findIndex(item =>
     item.email === 'useremail5@gmail.com'), 1); 
 
 console.table(users);
+
+// змінити email користувачу з id 2
+
+users.forEach(item => {
+    if(item.id === 2) {
+        item.email = 'changeemail@gmail.com'
+    };
+});
+
+console.table(users);
+
+//  який відсоток користувачів підписані (subscribed).
 
