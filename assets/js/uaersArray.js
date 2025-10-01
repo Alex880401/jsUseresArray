@@ -36,7 +36,7 @@ console.table(users);
 
 // масив користувачів які не підписані
 
-const usersIsNotSubscribed = users.filter(item => item.isSubscribed === false);
+const usersIsNotSubscribed = users.filter(item => !item.isSubscribed);
 
 console.table(usersIsNotSubscribed);
 
