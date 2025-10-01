@@ -48,45 +48,15 @@ users.forEach(item => {console.log(item.getFullName())});
 
 const notAdultFemaleName = [];
 
-users.forEach(item => {
-    if(item.isMale === false & item.age >= 6 & item.age <= 18) {
-        notAdultFemaleName.push(item.getFullName());
-    }
-});
-
-console.log(notAdultFemaleName);
-
-/*------------------------------------------
-Чому це не працює, не може прочитати значення властивості item.isMale і далі? А те саме, прописане через стрілку в метод (вище) працює???
-
-function isNotAdultFemale (item) {
-    if (item.isMale === false & item.age >= 6 & item.age <= 18) {
+function notAdultFemale (item) {
+    if(!item.isMale  && item.age >= 6 && item.age <= 18) {
         notAdultFemaleName.push(item.getFullName());
     };
 };
 
-users.forEach(isNotAdultFemale());
------------------------------------------------
-І в той же час, isNotAdultFemale не працює як колбек, але для окремо взятого елемента працює?
-
-isNotAdultFemale(users[1])
+users.forEach(notAdultFemale);
 
 console.log(notAdultFemaleName);
------------------------------------------------
-Те саме, на простішому прикладі
-
-не працює:
-
-function print (item) {
-    console.log(item.age);
-};
-
-users.forEach(print());
-
-працює:
-
-users.forEach(item => console.log(item.age));
-*/
 
 // Видалити з масиву користувача з email  useremail5@gmail.com.
 
