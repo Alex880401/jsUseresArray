@@ -79,7 +79,7 @@ console.table(users);
 
 function howMuchIsSubscribed (invArray) {
     const howMuchSubscribed = invArray.filter(item =>
-        item.isSubscribed === true);
+        item.isSubscribed);
 
     console.log(`Підписку мають ${Math.round((howMuchSubscribed.length / invArray.length) * 100)}% користувачів`);
 };
@@ -114,7 +114,7 @@ if(users.some(item =>
 // Перевірити, чи всі користувачі підписані 
 
 if(users.every(item => 
-    item.isSubscribed === true)) {
+    item.isSubscribed)) {
         console.log(`Всі користувачі підписані`);
     } else {
         console.log(`Не всі користувачі підписані`);
